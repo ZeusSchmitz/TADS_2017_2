@@ -24,3 +24,8 @@ Datas
 - 11/10 - AV2;
 - 15/11 - Feriado;
 - 29/11 - AV3
+
+
+---------------------------------------------------
+
+Equipe trabalho: Diego, Alvori, Daniel e Gustavo
