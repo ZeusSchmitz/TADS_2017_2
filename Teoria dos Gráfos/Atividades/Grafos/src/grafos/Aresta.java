@@ -10,33 +10,28 @@ package grafos;
  * @author informatica
  */
 public class Aresta {
-    private Vertice vi;
-    private Vertice vj;
+    private Nodo vi;
+    private Nodo vj;
     
-    public Aresta(int i, int j){
-        this.vi = new Vertice(i);
-        this.vj = new Vertice(j);
-    }
-
-    public int tamanhoAresta(){
-        int temp;
-        temp = vi.getPonto() - vj.getPonto();
-        if(temp < 0) temp = temp * (-1);
-        return temp;
-    }
-    public Vertice getVi() {
+    public Nodo getVi() {
         return vi;
     }
 
-    public Vertice getVj() {
+    public Nodo getVj() {
         return vj;
     }
 
-    public void setVi(Vertice vi) {
-        this.vi = vi;
+    public void setVi(Nodo vi) {
+        if(this.vi == null)
+            this.vi = vi;
+        else 
+            System.out.println("Esta aresta já possui um Nodo vi");
     }
 
-    public void setVj(Vertice vj) {
-        this.vj = vj;
+    public void setVj(Nodo vj) {
+        if(this.vj == null)
+            this.vj = vj;
+        else 
+            System.out.println("Esta aresta já possui um Nodo vj");
     }
 }

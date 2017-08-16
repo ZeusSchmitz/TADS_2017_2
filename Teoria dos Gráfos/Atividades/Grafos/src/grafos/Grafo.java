@@ -12,19 +12,13 @@ import java.util.ArrayList;
  * @author informatica
  */
 public class Grafo {
-    private ArrayList<Aresta> arestas = new ArrayList<>();
+    private ArrayList<Nodo> nodos = new ArrayList<>();
 
-    public void addAresta(int i1, int i2){
-        arestas.add(new Aresta(i1, i2));
+    public void addNodo(int i){
+        Nodo e = new Nodo(i);
+        nodos.add(e);
     }
-
-    public ArrayList<Aresta> getArestas() {
-        return arestas;
-    }
-    
-    public void tamanhoArestas(){
-        arestas.forEach((a)->System.out.println(a.tamanhoAresta()));
+    public void addAresta(int id1, int id2){
         
     }
-    
 }
