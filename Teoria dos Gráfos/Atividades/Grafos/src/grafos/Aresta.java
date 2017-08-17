@@ -10,28 +10,32 @@ package grafos;
  * @author informatica
  */
 public class Aresta {
-    private Nodo vi;
-    private Nodo vj;
+    private Nodo no1;
+    private Nodo no2;
     
-    public Nodo getVi() {
-        return vi;
+    public Nodo getOposto(Nodo no){
+        if(!no.equals(no2))
+            return no2;
+        else if(!no.equals(no1)){
+            return no1;
+        }else 
+            return null;
+    }
+    
+    public Nodo getNo1() {
+        return no1;
     }
 
-    public Nodo getVj() {
-        return vj;
+    public Nodo getNo2() {
+        return no2;
     }
-
-    public void setVi(Nodo vi) {
-        if(this.vi == null)
-            this.vi = vi;
-        else 
-            System.out.println("Esta aresta já possui um Nodo vi");
-    }
-
-    public void setVj(Nodo vj) {
-        if(this.vj == null)
-            this.vj = vj;
-        else 
-            System.out.println("Esta aresta já possui um Nodo vj");
+    
+    public void setNodo(Nodo no) {
+        if(this.no1 == null)
+            this.no1 = no;
+        else if(this.no2 == null)
+            this.no2 = no;
+        else
+            System.out.println("Esta aresta já possui dois Nós");
     }
 }

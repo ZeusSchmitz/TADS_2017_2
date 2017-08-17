@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package grafos;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author informatica
+ * @author Diego Armando Cacilha
  */
 public class Nodo {
     private int id;
@@ -32,4 +27,20 @@ public class Nodo {
     public void setId(int id) {
         this.id = id;
     }
+
+    public ArrayList<Aresta> getArestas() {
+        return arestas;
+    }
+    
+    @Override
+    public String toString(){
+        String str = "";
+        for(int id = 0; id < arestas.size(); id++){
+            Nodo noVi = arestas.get(id).getNo1();
+            Nodo noVj = arestas.get(id).getNo2();
+            str += "Id Vi: "+ noVi.getId() + " | Id Vj: " + noVj.getId() + " |\n";
+        }
+        return "\nArestas: \n"+str;
+    }
+    
 }
