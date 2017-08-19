@@ -13,6 +13,7 @@ public class Nodo {
     public Nodo(int id){
         this.id = id;
     }
+    
     public void addAresta(Aresta ar){
         boolean b = arestas.contains(ar);
         if(!b)

@@ -9,6 +9,18 @@ import java.util.ArrayList;
 public class Grafo {
     private ArrayList<Nodo> nodos = new ArrayList<>();
 
+    public void removeNo(int id){
+        ArrayList<Aresta> ar = new ArrayList<>();
+        Nodo no;
+        
+        for(int i = 0; i < nodos.size(); i++){
+            no = nodos.get(i);
+            if(no.getId() == id)
+                ar = no.getArestas();
+        }
+//        for(int i = 0; i < ar.size(); i++)
+//            if(ar.get(i).)
+    }
     public void getNodosAdjacentes(){
         for(int i = 0; i < nodos.size(); i++){
             System.out.println(nodos.get(i).toString());
@@ -22,7 +34,7 @@ public class Grafo {
     }
     public void addNodo(int i){
         Nodo e = new Nodo(i);
-        nodos.add(e);
+        nodos.set(i, e);
     }
     public void addAresta(int id1, int id2){
         ArrayList<Nodo> nos = new ArrayList<>();

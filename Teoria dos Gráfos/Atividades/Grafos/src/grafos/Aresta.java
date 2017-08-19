@@ -13,6 +13,13 @@ public class Aresta {
     private Nodo no1;
     private Nodo no2;
     
+    public void removeNo(Nodo no){
+        if(no.equals(no1))
+            no1 = null;
+        else
+            if(no.equals(no2))
+                no2 = null;
+    }
     public Nodo getOposto(Nodo no){
         if(!no.equals(no2))
             return no2;

@@ -6,8 +6,8 @@ public class Principal {
 
     public static void main(String[] args) {
         Grafo gra = new Grafo();
-        gra.addNodo(1);
         gra.addNodo(2);
+        gra.addNodo(1);
         gra.addNodo(3);
         gra.addNodo(4);
         
