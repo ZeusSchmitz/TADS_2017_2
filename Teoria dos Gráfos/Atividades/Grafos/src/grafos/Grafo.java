@@ -22,7 +22,7 @@ public class Grafo {
         nodos.remove(no);
         for(int i = 0; i < ar.size(); i++){
             Nodo noTemp = ar.get(i).getOposto(no);
-            noTemp.removeAresta(ar.get(i));
+            noTemp.removeAresta(ar.get(i)); 
         }
     }
     public void getNodosAdjacentes(){
