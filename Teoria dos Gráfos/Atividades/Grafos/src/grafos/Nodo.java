@@ -14,19 +14,18 @@ public class Nodo {
         this.id = id;
     }
     
+    public void removeAresta(Aresta a){
+        arestas.remove(a);
+    }
+    
     public void addAresta(Aresta ar){
-        boolean b = arestas.contains(ar);
-        if(!b)
+        if(!arestas.contains(ar))
             arestas.add(ar);
         else 
             System.out.println("A aresta não pode ser adicionada novamente no mesmo nó");
     }
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public ArrayList<Aresta> getArestas() {

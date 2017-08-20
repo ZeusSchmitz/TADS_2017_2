@@ -17,7 +17,7 @@ public class Principal {
         gra.addAresta(1, 4);
         gra.addAresta(2, 3);
         
-        
+        gra.removeNo(4);
         gra.getNodosAdjacentes();
     }
     

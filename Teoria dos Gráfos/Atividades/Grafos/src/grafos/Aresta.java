@@ -21,11 +21,11 @@ public class Aresta {
                 no2 = null;
     }
     public Nodo getOposto(Nodo no){
-        if(!no.equals(no2))
-            return no2;
-        else if(!no.equals(no1)){
+        if(no.equals(no2))
             return no1;
-        }else 
+        else if(no.equals(no1))
+            return no2;
+        else 
             return null;
     }
     

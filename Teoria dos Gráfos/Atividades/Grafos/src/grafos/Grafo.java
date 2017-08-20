@@ -11,15 +11,19 @@ public class Grafo {
 
     public void removeNo(int id){
         ArrayList<Aresta> ar = new ArrayList<>();
-        Nodo no;
+        Nodo no = null;
         
         for(int i = 0; i < nodos.size(); i++){
-            no = nodos.get(i);
-            if(no.getId() == id)
+            if(nodos.get(i).getId() == id){
+                no = nodos.get(i);
                 ar = no.getArestas();
+            }
         }
-//        for(int i = 0; i < ar.size(); i++)
-//            if(ar.get(i).)
+        nodos.remove(no);
+        for(int i = 0; i < ar.size(); i++){
+            Nodo noTemp = ar.get(i).getOposto(no);
+            noTemp.removeAresta(ar.get(i));
+        }
     }
     public void getNodosAdjacentes(){
         for(int i = 0; i < nodos.size(); i++){
@@ -34,7 +38,7 @@ public class Grafo {
     }
     public void addNodo(int i){
         Nodo e = new Nodo(i);
-        nodos.set(i, e);
+        nodos.add(e);
     }
     public void addAresta(int id1, int id2){
         ArrayList<Nodo> nos = new ArrayList<>();
