@@ -27,11 +27,11 @@ public class Grafo {
     }
     public void getNodosAdjacentes(){
         for(int i = 0; i < nodos.size(); i++){
-            System.out.println("Nodo pai: " + nodos.get(i).getId());
+            System.out.println("Nó: " + nodos.get(i).getId());
             ArrayList<Aresta> ar = nodos.get(i).getArestas();
             for(int j = 0; j < ar.size(); j++){
                 Nodo no = ar.get(j).getOposto(nodos.get(i));
-                System.out.print("Nó filho: "+no.getId()+" | ");
+                System.out.print("Nó adjacente: "+no.getId()+" | ");
             }
             System.out.println("\n");
         }
