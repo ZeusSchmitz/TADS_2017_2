@@ -1,0 +1,47 @@
+Engenharia de requisitos
+
+viabilidade -> Relatório de Viabilidade
+elicitação de requisitos -> Modelos de Sistema
+Especificação de Requisitos -> RU RS
+Validade de Requisitos -> Documentação de Requisitos
+
+
+CLIENTE & STAKEHOLDERS
+ Processo de Elicitação de Requisitos
+	->Obtenção
+	->Clasificação
+	->Priorização 
+	->Documentação
+
+
+TÉCNICAS PARA OBTENÇÃO DE REQUISITOS
+- Ponto de Vista
+	->Diferentes Visões de Stakeholders
+	->Encontra conclitos de requisitos
+- Entrevista
+	-> aberta
+	-> fechada
+- CENÁRIO
+	->Contar Como Acontece
+- ETNOGRAFIA
+	->Contexto social e organizacional
+- CASO DE USO
+	-> Agentes, Ações e Interações
+
+
+VERIFICAÇÃO DE REQUISITOS
+1- De validade
+	o SI fornece as funções
+2- De consistência
+	Existe conflito
+3- De completeza
+	Todas as funções pedidas existem 
+4- De realismo 
+	os requisitos podem ser implementados
+5- De facilidade de verificação
+	os requisitos podem ser verificados 
+6- De compreensão 
+7- De rastreabilidade
+	Origem, requisitos, projeto, ...
+8- De adaptabilidade
+	pode ser mudado sem grandes impactos
