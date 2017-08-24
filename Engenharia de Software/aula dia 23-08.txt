@@ -17,10 +17,10 @@ CLIENTE & STAKEHOLDERS
 TÉCNICAS PARA OBTENÇÃO DE REQUISITOS
 - Ponto de Vista
 	->Diferentes Visões de Stakeholders
-	->Encontra conclitos de requisitos
+	->Encontra conflitos de requisitos
 - Entrevista
-	-> aberta
-	-> fechada
+	-> aberta 
+	-> fechada => quando eu levo os questionamentos já prontos (preciso controlar estoque?, precisa ter tela de cadastro,...)
 - CENÁRIO
 	->Contar Como Acontece
 - ETNOGRAFIA
@@ -45,3 +45,10 @@ VERIFICAÇÃO DE REQUISITOS
 	Origem, requisitos, projeto, ...
 8- De adaptabilidade
 	pode ser mudado sem grandes impactos
+
+
+ATIVIDADES
+1- Identificar os Stakeholders
+2- Desenvolver casos de uso para apoio às demais técnicas
+
+Para semana que vem para a nossa avaliação obrigatoriamente trazer o documento impresso e pronto.
