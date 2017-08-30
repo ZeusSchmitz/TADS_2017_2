@@ -31,20 +31,20 @@ TÉCNICAS PARA OBTENÇÃO DE REQUISITOS
 
 VERIFICAÇÃO DE REQUISITOS
 1- De validade
-	o SI fornece as funções
+	o SI fornece as funções?
 2- De consistência
-	Existe conflito
+	Existe conflito?
 3- De completeza
-	Todas as funções pedidas existem 
+	Todas as funções pedidas existem?
 4- De realismo 
-	os requisitos podem ser implementados
+	os requisitos podem ser implementados?
 5- De facilidade de verificação
-	os requisitos podem ser verificados 
+	os requisitos podem ser verificados?
 6- De compreensão 
 7- De rastreabilidade
-	Origem, requisitos, projeto, ...
+	Origem, requisitos, projeto, ... é possível rastreá-los, quem pediu?
 8- De adaptabilidade
-	pode ser mudado sem grandes impactos
+	pode ser mudado sem grandes impactos?
 
 
 ATIVIDADES
