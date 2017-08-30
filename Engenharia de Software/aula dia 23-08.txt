@@ -1,9 +1,9 @@
 Engenharia de requisitos
 
 viabilidade -> Relatório de Viabilidade
-elicitação de requisitos -> Modelos de Sistema
-Especificação de Requisitos -> RU RS
-Validade de Requisitos -> Documentação de Requisitos
+    |-> elicitação de requisitos -> Modelos de Sistema
+	  |-> Especificação de Requisitos -> RU RS
+		|-> Validade de Requisitos -> Documentação de Requisitos
 
 
 CLIENTE & STAKEHOLDERS
