@@ -14,16 +14,19 @@ import java.util.Map;
  */
 public class Main {
     public static void main(String[] args) throws Exception{
-        Nodo no1 = new Nodo(1);
-        Nodo no2 = new Nodo(2);
-        Aresta aresta = new Aresta();
-        aresta.setnI(no1);
-        aresta.setnJ(no2);
-        no1.addAresta(aresta);
-        no2.addAresta(aresta);
+        Grafo gra = new Grafo();
+        gra.addNodo(1);
+        gra.addNodo(2);
+        gra.addNodo(3);
+        gra.addNodo(4);
+        gra.addNodo(5);
         
+        gra.addAresta(1, 2);
+        gra.addAresta(1, 3);
+        gra.addAresta(1, 4);
+        gra.addAresta(1, 5);
+        gra.addAresta(5, 2);
         
-        System.out.println(no1.getAdjacentes().get(0).getId());
-        
+        gra.printAdjacentes(5);
     }
 }

@@ -8,6 +8,14 @@ public class Aresta {
     private Nodo nJ;
     private Nodo nI;
 
+    public Aresta(){
+        
+    }
+    public Aresta(Nodo no1, Nodo no2){
+        nI = no1;
+        nJ = no2;
+    }
+    
     public Nodo getnI() {
         return nI;
     }

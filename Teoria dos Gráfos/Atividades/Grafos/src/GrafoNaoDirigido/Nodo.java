@@ -23,7 +23,7 @@ public class Nodo {
         if(!this.arestas.contains(aresta))
             this.arestas.add(aresta);
         else
-            throw new Exception("Esta aresta já foi adicionada");
+            throw new Exception("Esta aresta já foi adicionada neste Nodo");
     }
     public int degree(){
         return this.arestas.size();
