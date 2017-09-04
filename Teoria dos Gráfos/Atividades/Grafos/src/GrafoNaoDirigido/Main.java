@@ -1,12 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GrafoNaoDirigido;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -26,7 +18,8 @@ public class Main {
         gra.addAresta(1, 4);
         gra.addAresta(1, 5);
         gra.addAresta(5, 2);
-        
-        gra.printAdjacentes(5);
+//        gra.removeAresta(1, 5);
+//        gra.removeNodo(1);
+        gra.printAdjacentes();
     }
 }

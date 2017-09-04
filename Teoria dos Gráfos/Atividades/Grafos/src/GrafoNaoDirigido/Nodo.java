@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GrafoNaoDirigido;
 
 import java.util.LinkedList;
@@ -11,14 +6,29 @@ import java.util.LinkedList;
  *
  * @author Diego
  */
-public class Nodo {
+public class Nodo implements InterfaceNodo{
     private LinkedList<Aresta> arestas = new LinkedList<Aresta>();
     private int id;
     
     public Nodo(int id){
         this.id = id;
     }
-    
+    private void imprime(){
+        System.out.print("->" + this.id);
+    }
+    @Override
+    public void imprimeAdjacentes(){
+        arestas.forEach(a -> {
+            a.getNodoOposto(this).imprime();
+        });
+        System.out.print("\n");
+    }
+    /**
+     * 
+     * @param aresta
+     * @throws Exception se aresta já estiver no Nodo
+     */
+    @Override
     public void addAresta(Aresta aresta) throws Exception{
         if(!this.arestas.contains(aresta))
             this.arestas.add(aresta);
@@ -37,18 +47,28 @@ public class Nodo {
         return nosAdj;
     }
     
-    public boolean isAdjacente(int id){
-        LinkedList<Nodo> adj = new LinkedList<>();
-        LinkedList<Integer> ids = new LinkedList<>();
-        adj.forEach(a -> {
-            ids.add(a.getId());
-        });
-        return ids.contains(id);
+    public boolean isAdjacente(Nodo no){
+        for (int i = 0; i < arestas.size(); i++){
+            if(arestas.get(i).contemNodo(no))
+                return arestas.get(i).contemNodo(no);
+        }
+        return false;
     }
 
     public int getId() {
         return id;
     }
-    
+
+    public LinkedList<Aresta> getArestas() {
+        return arestas;
+    }
+
+    @Override
+    public boolean removeAresta(Aresta aresta) {
+        if(arestas.contains(aresta))
+            return this.arestas.remove(aresta);
+        else
+            return false;
+    }
     
 }

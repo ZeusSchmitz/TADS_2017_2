@@ -19,7 +19,9 @@ public class Aresta {
     public Nodo getnI() {
         return nI;
     }
-    
+    public Boolean contemNodo(Nodo no){
+        return (nI.equals(no) || nJ.equals(no));
+    }
     public void addNo(Nodo no){
         if(!no.equals(nJ) && nJ == null)
             this.nJ = no;
