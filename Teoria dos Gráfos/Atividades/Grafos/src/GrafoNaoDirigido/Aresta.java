@@ -4,7 +4,7 @@ package GrafoNaoDirigido;
  *
  * @author Diego
  */
-public class Aresta {
+public class Aresta implements InterfaceAresta{
     private Nodo nJ;
     private Nodo nI;
 
@@ -15,36 +15,41 @@ public class Aresta {
         nI = no1;
         nJ = no2;
     }
-    
-    public Nodo getnI() {
+    @Override
+    public Nodo getNi() {
         return nI;
     }
-    public Boolean contemNodo(Nodo no){
+    @Override
+    public Boolean contemNodo(Nodo no) {
         return (nI.equals(no) || nJ.equals(no));
     }
-    public void addNo(Nodo no){
+    @Override
+    public void addNo(Nodo no) {
         if(!no.equals(nJ) && nJ == null)
             this.nJ = no;
         else if(!no.equals(nI) && nI == null)
             this.nI = no;
     }
-    public Nodo getNodoOposto(Nodo no){
+    @Override
+    public Nodo getNodoOposto(Nodo no) {
         if(no.equals(nJ)){
             return nI;
         }else if(no.equals(nI)){
             return nJ;
         }
         return null;
+        
     }
-    public Nodo getnJ() {
+    @Override
+    public Nodo getNj() {
         return nJ;
     }
-
-    public void setnI(Nodo nI) {
+    @Override
+    public void setNi(Nodo nI) {
         this.nI = nI;
     }
-
-    public void setnJ(Nodo nJ) {
+    @Override
+    public void setNj(Nodo nJ) {
         this.nJ = nJ;
     }
 }
