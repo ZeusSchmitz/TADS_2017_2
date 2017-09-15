@@ -1,5 +1,7 @@
 package GrafoNaoDirigido;
 
+import GrafoNaoDirigido.Interfaces.InterfaceAresta;
+
 /**
  *
  * @author Diego

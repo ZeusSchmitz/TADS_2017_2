@@ -1,5 +1,6 @@
 package GrafoNaoDirigido;
 
+import GrafoNaoDirigido.Interfaces.InterfaceNodo;
 import java.util.LinkedList;
 
 /**

@@ -1,5 +1,6 @@
 package GrafoNaoDirigido;
 
+import GrafoNaoDirigido.Interfaces.InterfaceGrafo;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;

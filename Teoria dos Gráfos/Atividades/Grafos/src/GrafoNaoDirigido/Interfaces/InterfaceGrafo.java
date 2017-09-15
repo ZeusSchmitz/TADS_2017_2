@@ -1,5 +1,6 @@
-package GrafoNaoDirigido;
+package GrafoNaoDirigido.Interfaces;
 
+import GrafoNaoDirigido.Nodo;
 import java.util.Map;
 
 /**
