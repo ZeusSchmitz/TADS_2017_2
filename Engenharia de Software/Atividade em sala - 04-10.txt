@@ -1,0 +1,48 @@
+Locadora de Fita K7 - TDK90
+
+Requisitos de Usuário
+RU01 - Cadastrar Clientes (Usuário1);
+RU02 - Cadastrar fitas (Usuário1);
+RU03 - Cadastrar locação (Usuário1);
+RU04 - Emitir relatório de locações por dia, semana e mês (Usuário1);
+RU05 - Cadastrar fornecedores (Usuário1);
+
+Requisitos de Sistema
+RS01 - Cadastrar clientes. Campos necessários:
+	Pessoal
+	- Nome;
+	- Sobrenome;
+	- Data de nascimento;
+	- CPF;
+	- Email;
+	- Telefone; 
+	Endereço 
+	- CEP;
+	- Logradouro;
+	- Número;
+	- Bloco;
+	- Bairro;
+	- Cidade; 
+	- UF;
+	- Complemento;
+	(Origem: RU01)
+RS02 - Cadastrar fita (RU02);
+RS03 - Cadastrar locações (RU03);
+RS04 - Gerar relatórios gerenciais - exemplo: rel. de clientes, fitas, locações, etc... (RU04);
+RS05 - Cadastrar fornecedor (RU05)
+
+Requisitos de Interface
+RI01 - Consultar endereço do cliente e fornecedor pelo CEP quando cadastra-los (RS01, RS05);
+
+Requisitos de Domínio
+RD01 - Emitir cupom fiscal para o consumidor (Cód. de Defesa do Consumidor)
+
+Requisitos Funcionais
+RF01 - RS01;
+RF02 - Preencher os campos de endereço após usuário digitar CEP;
+
+Requisitos Não Funcionais
+RNF01 - Banco de Dados MySql (Gerente de Projeto );
+RNF02 - Tecnologias WEB: JS, HTML5, CSS3, MYSQL (Gerente de Projeto);
+RNF03 - Somente o Admin pode cadastrar fitas (RS02);
+RNF04 - 

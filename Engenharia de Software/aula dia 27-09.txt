@@ -1,0 +1,6 @@
+Requisitos de Usuário (RU)
+Requisitos de Sistema (RS)
+Requisitos de Interface (RI) - Requisitos para comunicação com outros sistemas (sistemas externos). Origem: 
+Requisitos de Domínio (RD) - Requisistos de negócio: leis..
+
+RU, RS, RI, RD => Requisistos Funcionais (RF) e Requisitos Não Funcionais (RNF)
