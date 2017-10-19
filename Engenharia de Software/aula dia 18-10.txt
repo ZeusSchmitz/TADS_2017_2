@@ -30,3 +30,12 @@ User			|	SI
 3 faz pagamento		|4 gera NF
 5 informa entrega (S/N)	|6 gera ordem de entrega
 ==============================================================
+
+Exemplo de caso de uso na figura "exemplo caso de uso"
+
+==============================================================
+
+DIAGRAMA DE ATIVIDADES
+
+
+Para próxima aula: fazer diagrama de atividade e de caso de uso do nosso trabalho.
