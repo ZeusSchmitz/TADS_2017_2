@@ -8,7 +8,7 @@ Caso de Uso
 - Inclusão 
 - Extensão (com comentário)
 
-Caso elipse é um caso de uso; Todo caso de uso deve ter uma tabela com a sua descrição. Exemplo de tabela: 
+Cada elipse é um caso de uso; Todo caso de uso deve ter uma tabela com a sua descrição. Exemplo de tabela: 
 
 ==============================================================
 DESC. CASO DE USO
