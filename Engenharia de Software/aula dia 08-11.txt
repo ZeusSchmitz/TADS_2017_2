@@ -1,0 +1,12 @@
+Diagrama de Classe
+
+-Visibilidade:
+	+ Pública
+	- Privada
+	# Protegida
+	~ Pacote
+
+*Multiplicidade
+*Associação
+*Agregação
+*Composição 
