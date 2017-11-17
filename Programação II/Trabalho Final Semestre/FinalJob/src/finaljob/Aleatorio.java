@@ -1,42 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package javaapplication7;
+package finaljob;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
 
 /**
  *
- * @author tads
+ * @author Diego Armando Cacilha
  */
 public class Aleatorio {
 
-    RandomAccessFile file;
-    int id = 0;
+    private RandomAccessFile file;
+    private int id = 1;
+    
     private void getId(){
-        
+        String[] arr = new String[3];
+        String str = "";
+        try {
+            while (str != null) {
+                str = this.file.readLine();
+                if(str != null){
+                    arr = str.split(";");
+                    if(Integer.parseInt(arr[2]) >= this.id) {
+                        this.id = Integer.parseInt(arr[2]);
+                        this.id++;
+                    }
+                    System.out.println(this.id);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Erro na leitura da linha");
+            System.out.println(e);
+        }
     }
     public Aleatorio(String caminho) {
         try {
             this.file = new RandomAccessFile(new File(caminho), "rw");
+            this.getId();
         } catch (Exception e) {
             System.out.println("Arquivo inexistente");
-            System.out.println(e);
-        }
-        try {
-            this.file.seek(file.length()-2);
-            
-        } catch (Exception e) {
-            System.out.println("aqui");
-        }
-        try {
-            System.out.println("a" + this.file.readChar());
-            //System.out.println(this.file.readByte());
-        } catch (Exception e) {
             System.out.println(e);
         }
     }
