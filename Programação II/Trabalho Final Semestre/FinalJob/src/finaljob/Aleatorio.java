@@ -12,6 +12,9 @@ public class Aleatorio {
     private RandomAccessFile file;
     private int id = 1;
     
+    /**
+     * Busca o ultimo ID inserido no arquivo txt
+     */
     private void getId(){
         String[] arr = new String[3];
         String str = "";
@@ -32,6 +35,11 @@ public class Aleatorio {
             System.out.println(e);
         }
     }
+    /**
+     * Método construtor
+     * 
+     * @param caminho Local do arquivo
+     */
     public Aleatorio(String caminho) {
         try {
             this.file = new RandomAccessFile(new File(caminho), "rw");
@@ -41,7 +49,11 @@ public class Aleatorio {
             System.out.println(e);
         }
     }
-
+    /**
+     * Insere um novo contato no arquivo txt
+     * @param nome Nome do contato
+     * @param tel Telefone do contato
+     */
     public void inserir(String nome, long tel) {
         try {
             long l = file.length();
@@ -54,11 +66,10 @@ public class Aleatorio {
         }
 
     }
+    /**
+     * 
+     */
     public void buscar(){
-        
-        
-        
-        
         
     }
 

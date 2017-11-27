@@ -23,7 +23,6 @@ public class Principal {
     public static void main(String[] args) {
        Aleatorio al = new Aleatorio("./arquivo.txt");
        al.inserir("Diegos", 99999999);
-       
     }
     
 }
