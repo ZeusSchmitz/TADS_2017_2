@@ -12,7 +12,7 @@
  */
 package finaljob;
 
-/** 
+/**
  * @author tads
  */
 public class Principal {
@@ -21,8 +21,10 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       Aleatorio al = new Aleatorio("./arquivo.txt");
-       al.inserir("Diegos", 99999999);
+        Aleatorio al = new Aleatorio("./arquivo.txt");
+        System.out.println(al.buscar("Sophie"));
+        
+        //al.inserir("Diego", 99999999);
     }
-    
+
 }

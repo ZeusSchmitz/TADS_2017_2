@@ -27,7 +27,7 @@ public class Aleatorio {
                         this.id = Integer.parseInt(arr[2]);
                         this.id++;
                     }
-                    System.out.println(this.id);
+                    //System.out.println(this.id);
                 }
             }
         } catch (Exception e) {
@@ -58,7 +58,7 @@ public class Aleatorio {
         try {
             long l = file.length();
             this.file.seek(l);
-            this.file.writeBytes(nome+";"+tel+";"+this.id+"\n");
+            this.file.writeBytes(nome.toUpperCase()+";"+tel+";"+this.id+"\n");
             id++;
         } catch (Exception e) {
             System.out.println("Arquivo não pode ser escrito!"); 
@@ -66,11 +66,23 @@ public class Aleatorio {
         }
 
     }
-    /**
-     * 
-     */
-    public void buscar(){
-        
+    public String buscar(String nome){
+        String str = "";
+        String[] arr = new String[3];
+        nome = nome.toUpperCase();
+        try {
+            this.file.seek(0);
+            while(str != null){
+                str = this.file.readLine();
+                if (str != null) arr = str.split(";");
+                if(nome.equals(arr[0]))
+                    return str;
+            }
+        } catch (Exception e) {
+            System.out.println("Erro ao buscar contato");
+            System.out.println(e);
+        }
+        return null;
     }
 
 }
