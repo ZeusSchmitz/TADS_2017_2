@@ -55,11 +55,13 @@ public class Aleatorio implements interfaces.Aleatorio{
      * @param tel Telefone do contato
      */
     @Override
-    public void inserir(String nome, long tel) {
+    public void inserir(Contato c) {
+        c.setId(this.id);
+       
         try {
             long l = file.length();
             this.file.seek(l);
-            this.file.writeBytes(nome.toUpperCase()+";"+tel+";"+this.id+"\n");
+            this.file.writeBytes(c.getNome().toUpperCase()+";"+c.getTelefone()+";"+c.getId()+"\n");
             id++;
         } catch (Exception e) {
             System.out.println("Arquivo não pode ser escrito!"); 
