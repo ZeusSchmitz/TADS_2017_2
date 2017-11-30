@@ -22,7 +22,7 @@ public class Principal {
      */
     public static void main(String[] args) {
         Aleatorio al = new Aleatorio("./arquivo.txt");
-        System.out.println(al.buscar("Sophie"));
+        System.out.println(al.buscar("diego"));
         
         //al.inserir("Diego", 99999999);
     }

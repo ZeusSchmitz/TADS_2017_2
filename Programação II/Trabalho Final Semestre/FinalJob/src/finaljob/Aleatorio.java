@@ -7,7 +7,7 @@ import java.io.RandomAccessFile;
  *
  * @author Diego Armando Cacilha
  */
-public class Aleatorio {
+public class Aleatorio implements interfaces.Aleatorio{
 
     private RandomAccessFile file;
     private int id = 1;
@@ -54,6 +54,7 @@ public class Aleatorio {
      * @param nome Nome do contato
      * @param tel Telefone do contato
      */
+    @Override
     public void inserir(String nome, long tel) {
         try {
             long l = file.length();
@@ -66,6 +67,7 @@ public class Aleatorio {
         }
 
     }
+    @Override 
     public String buscar(String nome){
         String str = "";
         String[] arr = new String[3];
@@ -83,6 +85,14 @@ public class Aleatorio {
             System.out.println(e);
         }
         return null;
+    }
+    @Override
+    public void deletar(int id){
+        
+    }
+    @Override
+    public void alterar(){
+        
     }
 
 }
