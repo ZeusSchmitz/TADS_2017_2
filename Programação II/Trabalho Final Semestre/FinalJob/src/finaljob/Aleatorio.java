@@ -55,13 +55,11 @@ public class Aleatorio implements interfaces.Aleatorio{
      * @param tel Telefone do contato
      */
     @Override
-    public void inserir(Contato c) {
-        c.setId(this.id);
-       
+    public void inserirNoFinal(Contato c) {
         try {
             long l = file.length();
             this.file.seek(l);
-            this.file.writeBytes(c.getNome().toUpperCase()+";"+c.getTelefone()+";"+c.getId()+"\n");
+            this.file.writeBytes(c.getNome().toUpperCase()+";"+c.getTelefone()+";"+this.id+"\n");
             id++;
         } catch (Exception e) {
             System.out.println("Arquivo não pode ser escrito!"); 
@@ -79,8 +77,7 @@ public class Aleatorio implements interfaces.Aleatorio{
             while(str != null){
                 str = this.file.readLine();
                 if (str != null) arr = str.split(";");
-                if(nome.equals(arr[0]))
-                    return str;
+                if(nome.equals(arr[0])) return str;
             }
         } catch (Exception e) {
             System.out.println("Erro ao buscar contato");
@@ -92,9 +89,40 @@ public class Aleatorio implements interfaces.Aleatorio{
     public void deletar(int id){
         
     }
+    private void inserir(Contato c){
+        try {
+            this.file.writeBytes(c.getNome().toUpperCase()+";"+c.getTelefone()+";"+this.id+"\n"); 
+        } catch (Exception e) {
+            System.out.println("Problema ao inserir contato");
+            System.out.println(e);
+        }
+    }
     @Override
-    public void alterar(){
-        
+    public void alterar(int id, String nome, long tel){
+        try {
+            RandomAccessFile temp = new RandomAccessFile(new File("./temp.txt"), "rw");
+        } catch (Exception e) {
+            System.out.println("Problemas com o arquivo temporário");
+            System.out.println(e);
+        }
+        String str = "";
+        String[] arr = new String[3];
+        Contato c = new Contato(nome, tel);
+        try {
+            this.file.seek(0);
+            while(str != null){
+                str = this.file.readLine();
+                if (str != null) arr = str.split(";");
+                if(id == Integer.parseInt(arr[2])){
+                    this.file.seek(this.file.getFilePointer() - str.length()-1);
+                    this.inserir(c);
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Problema para localizar contato");
+            System.out.println(e);
+        }
     }
 
 }

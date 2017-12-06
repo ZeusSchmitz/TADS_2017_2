@@ -22,9 +22,9 @@ public class Principal {
      */
     public static void main(String[] args) {
         Aleatorio al = new Aleatorio("./arquivo.txt");
-        System.out.println(al.buscar("diego"));
-        
-        //al.inserir("Diego", 99999999);
+        al.alterar(1, "Novo NOME", 1111122222);
+//        Contato c = new Contato("Gisele",3232);
+//        al.inserirNoFinal(c);
     }
 
 }
