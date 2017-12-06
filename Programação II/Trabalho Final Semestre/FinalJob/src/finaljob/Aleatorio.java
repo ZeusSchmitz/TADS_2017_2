@@ -27,7 +27,6 @@ public class Aleatorio implements interfaces.Aleatorio{
                         this.id = Integer.parseInt(arr[2]);
                         this.id++;
                     }
-                    //System.out.println(this.id);
                 }
             }
         } catch (Exception e) {
@@ -118,9 +117,10 @@ public class Aleatorio implements interfaces.Aleatorio{
             String st = "";
             temp.seek(0);
             this.file.seek(0);
+            this.file.setLength(0);//limpa o arquivo para poder ser regravado.
             do{
                 st = temp.readLine();
-                if(st != null) this.file.writeBytes(st+"\n");
+                if(st != null) this.file.writeBytes(st.toUpperCase()+"\n");
             }while(st != null);
         } catch (Exception e) {
             System.out.println("Problema para localizar contato");

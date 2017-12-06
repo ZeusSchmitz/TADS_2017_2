@@ -23,7 +23,7 @@ public class Principal {
     public static void main(String[] args) throws Exception{
         Aleatorio al = new Aleatorio("./arquivo.txt");
         //al.reescrita();
-        al.alterar(1, "Aa", 1111122222);
+        al.alterar(1, "Diegooooo", 1111122222);
 //        Contato c = new Contato("Gisele",3232);
 //        al.inserirNoFinal(c);
     }
