@@ -99,26 +99,29 @@ public class Aleatorio implements interfaces.Aleatorio{
     }
     @Override
     public void alterar(int id, String nome, long tel){
-        try {
-            RandomAccessFile temp = new RandomAccessFile(new File("./temp.txt"), "rw");
-        } catch (Exception e) {
-            System.out.println("Problemas com o arquivo temporário");
-            System.out.println(e);
-        }
         String str = "";
         String[] arr = new String[3];
-        Contato c = new Contato(nome, tel);
         try {
             this.file.seek(0);
+            RandomAccessFile temp = new RandomAccessFile(new File("./temp"), "rw");
             while(str != null){
                 str = this.file.readLine();
-                if (str != null) arr = str.split(";");
-                if(id == Integer.parseInt(arr[2])){
-                    this.file.seek(this.file.getFilePointer() - str.length()-1);
-                    this.inserir(c);
-                    break;
+                if (str != null) {
+                    arr = str.split(";");
+                    if(id == Integer.parseInt(arr[2])){
+                        temp.writeBytes(nome+";"+tel+";"+id+"\n");
+                    }else{
+                        temp.writeBytes(str + "\n");
+                    }
                 }
             }
+            String st = "";
+            temp.seek(0);
+            this.file.seek(0);
+            do{
+                st = temp.readLine();
+                if(st != null) this.file.writeBytes(st+"\n");
+            }while(st != null);
         } catch (Exception e) {
             System.out.println("Problema para localizar contato");
             System.out.println(e);
