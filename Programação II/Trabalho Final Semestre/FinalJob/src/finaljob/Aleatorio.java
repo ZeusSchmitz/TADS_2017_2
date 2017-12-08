@@ -14,25 +14,35 @@ public class Aleatorio implements interfaces.Aleatorio {
     private RandomAccessFile temp;
 
     /**
+     * Imprime os contatos do arquivo txt
+     */
+    @Override
+    public void showContatos() throws Exception {
+        String str;
+        this.file.seek(0);
+        System.out.println("Nome; Telefone; ID");
+        do{
+            str = this.file.readLine();
+            if(str != null) System.out.println(str);
+        }while(str != null);
+    }
+
+    /**
      * Busca o ultimo ID inserido no arquivo txt
      */
-    private void getId() {
-        String[] arr = new String[3];
+    private void getId() throws Exception {
+        this.file.seek(0);
+        String[] arr;
         String str = "";
-        try {
-            while (str != null) {
-                str = this.file.readLine();
-                if (str != null) {
-                    arr = str.split(";");
-                    if (Integer.parseInt(arr[2]) >= this.id) {
-                        this.id = Integer.parseInt(arr[2]);
-                        this.id++;
-                    }
+        while (str != null) {
+            str = this.file.readLine();
+            if (str != null) {
+                arr = str.split(";");
+                if (Integer.parseInt(arr[2]) >= this.id) {
+                    this.id = Integer.parseInt(arr[2]);
+                    this.id++;
                 }
             }
-        } catch (Exception e) {
-            System.out.println("Erro na leitura da linha");
-            System.out.println(e);
         }
     }
 
@@ -117,8 +127,10 @@ public class Aleatorio implements interfaces.Aleatorio {
         } while (str != null);
 
     }
+
     /**
      * Altera um contato existente.
+     *
      * @param id Identificação
      * @param nome Nome
      * @param tel Telefone
