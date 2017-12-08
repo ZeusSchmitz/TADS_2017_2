@@ -53,13 +53,12 @@ public class Aleatorio implements interfaces.Aleatorio {
     }
 
     /**
-     * Insere um novo contato no arquivo txt
+     * Insere um novo contato no final do arquivo txt
      *
-     * @param nome Nome do contato
-     * @param tel Telefone do contato
+     * @param c Contato a ser inserido
      */
     @Override
-    public void inserirNoFinal(Contato c) {
+    public void inserir(Contato c) {
         try {
             long l = file.length();
             this.file.seek(l);
@@ -73,30 +72,27 @@ public class Aleatorio implements interfaces.Aleatorio {
     }
 
     @Override
-    public String buscar(String nome) {
+    public Contato buscar(String nome) throws Exception {
         String str = "";
         String[] arr = new String[3];
         nome = nome.toUpperCase();
-        try {
-            this.file.seek(0);
-            while (str != null) {
-                str = this.file.readLine();
-                if (str != null) {
-                    arr = str.split(";");
-                }
-                if (nome.equals(arr[0])) {
-                    return str;
-                }
+
+        this.file.seek(0);
+        while (str != null) {
+            str = this.file.readLine();
+            if (str != null) {
+                arr = str.split(";");
             }
-        } catch (Exception e) {
-            System.out.println("Erro ao buscar contato");
-            System.out.println(e);
+            if (nome.equals(arr[0])) {
+                return new Contato(arr[0], Long.parseLong(arr[1]), Integer.parseInt(arr[2]));
+            }
         }
+
         return null;
     }
 
     @Override
-    public void deletar(int id) throws Exception{
+    public void deletar(int id) throws Exception {
         String str;
         String[] arr;
         this.file.seek(0);
@@ -109,26 +105,24 @@ public class Aleatorio implements interfaces.Aleatorio {
                     temp.writeBytes(str + "\n");
                 }
             }
-        }while (str != null);
+        } while (str != null);
         str = "";
         this.file.setLength(0);
         this.temp.seek(0);
-        do{
+        do {
             str = this.temp.readLine();
-            if(str != null) this.file.writeBytes(str + "\n");
-        }while(str != null);
+            if (str != null) {
+                this.file.writeBytes(str + "\n");
+            }
+        } while (str != null);
 
     }
-
-    private void inserir(Contato c) {
-        try {
-            this.file.writeBytes(c.getNome().toUpperCase() + ";" + c.getTelefone() + ";" + this.id + "\n");
-        } catch (Exception e) {
-            System.out.println("Problema ao inserir contato");
-            System.out.println(e);
-        }
-    }
-
+    /**
+     * Altera um contato existente.
+     * @param id Identificação
+     * @param nome Nome
+     * @param tel Telefone
+     */
     @Override
     public void alterar(int id, String nome, long tel) {
         String str = "";
