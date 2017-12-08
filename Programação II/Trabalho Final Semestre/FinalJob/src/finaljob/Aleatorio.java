@@ -141,6 +141,7 @@ public class Aleatorio implements interfaces.Aleatorio {
         String[] arr = new String[3];
         try {
             this.file.seek(0);
+            this.temp.setLength(0);
             while (str != null) {
                 str = this.file.readLine();
                 if (str != null) {
