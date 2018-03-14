@@ -10,7 +10,7 @@ Concorência
 Viabilidade de produto
 	Existem componentes e matérias-primas para fazer o produto ou prestar o serviço?
 	Matérias-primas: cana de açúcar, açúcar, fermento
-	Componentes: Toneis de madeira e inox, moedor de cana, caixa d'água, termômetro, alambique, refratômetro de brix, mangueiras de siliconte 
+	Componentes: Toneis de madeira e inox, moedor de cana, caixa d'água, termômetro, alambique, refratômetro de brix, mangueiras de silicone 
 
 Controle governamental
 	Há controles governamentais sobre o produto ou tipo de negócio?
